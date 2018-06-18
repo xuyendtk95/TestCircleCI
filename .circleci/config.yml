@@ -57,7 +57,7 @@ jobs:
 
       - restore_cache:
           key: bundle-v1-{{ checksum "Gemfile.lock" }}-{{ arch }}
-
+      - run: gem install bundler
       - run: bundle install
      
       - save_cache:
